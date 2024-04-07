@@ -1,4 +1,4 @@
-import { GlobalCss, Container } from './styles'
+import { GlobalCss } from './styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Exemplo } from './pages/Exemplo/exemplo'
 import { Home } from './pages/Home/Home'
@@ -16,9 +16,7 @@ function App() {
   return (
     <>
       <GlobalCss />
-      <Container>
-        <RouterProvider router={rotas} />
-      </Container>
+      <RouterProvider router={rotas} />
     </>
   )
 }
