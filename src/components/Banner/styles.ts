@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import imagem from '../../assets/images/banner-homem-aranha.png'
+import { TagContainer } from '../Tag/styles'
 
 export const Imagem = styled.div`
   background-image: url(${imagem});
@@ -9,7 +10,20 @@ export const Imagem = styled.div`
   height: 560px;
   display: block;
   font-weight: bold;
-  padding-top: 240px;
+
+  .container {
+    padding-top: 240px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  ${TagContainer} {
+    position: absolute;
+    top: 32px;
+    cursor: pointer;
+  }
 `
 
 export const Titulo = styled.h2`
