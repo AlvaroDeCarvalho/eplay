@@ -1,16 +1,17 @@
 import { GlobalCss } from './styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Exemplo } from './pages/Exemplo/exemplo'
 import { Home } from './pages/Home/Home'
+import ProductsList from './components/ProductsList'
 function App() {
   const rotas = createBrowserRouter([
     {
       path: '/',
-      element: <Home />
-    },
-    {
-      path: '/exemplo',
-      element: <Exemplo />
+      element: (
+        <>
+          <Home />
+          <ProductsList title="promoções" background="gray" />
+        </>
+      )
     }
   ])
   return (
