@@ -1,18 +1,34 @@
 import Tag from '../Tag'
 import * as S from './styles'
-const Product = () => {
+
+type Props = {
+  title: string
+  category: string
+  system: string
+  description: string
+  infos: string[]
+  image: string
+}
+const Product = ({
+  title,
+  category,
+  description,
+  image,
+  infos,
+  system
+}: Props) => {
   return (
     <S.Card>
-      <img src={'//placehold.it/222x250'} />
-      <S.Titulo>Nome Do Jogo</S.Titulo>
-      <Tag>Categoria</Tag>
-      <Tag>Windows</Tag>
-      <S.Paragrafo>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias
-        natus eum blanditiis quas veritatis, earum accusantium placeat cum?
-        Voluptatem, dolorum. Ad explicabo illum molestiae rem sed? Voluptatem,
-        pariatur. Eligendi?
-      </S.Paragrafo>
+      <S.ComponentesInfo>
+        {infos.map((info) => (
+          <Tag key={info}>{info}</Tag>
+        ))}
+      </S.ComponentesInfo>
+      <img src={image} alt={title} />
+      <S.Titulo>{title}</S.Titulo>
+      <Tag>{category}</Tag>
+      <Tag>{system}</Tag>
+      <S.Paragrafo>{description}</S.Paragrafo>
     </S.Card>
   )
 }

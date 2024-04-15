@@ -1,23 +1,56 @@
 import Product from '../Product'
 import { Container, List } from './styles'
-type Props = {
+export type Props = {
   title: string
   background: 'gray' | 'black'
 }
 
 const ProductsList = ({ title, background }: Props) => {
   return (
-    <div className="container">
-      <Container>
+    <Container background={background}>
+      <div className="container">
         <h2>{title}</h2>
         <List>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Product
+            category="Ação"
+            description="teteca"
+            infos={['em breve']}
+            system="Windows"
+            title="teteca ultra"
+            image={'//placehold.it/222x250'}
+            key={title}
+          />
+          <Product
+            category="Ação"
+            description="teteca"
+            infos={['em breve']}
+            system="Windows"
+            title="teteca ultra"
+            image={'//placehold.it/222x250'}
+            key={title}
+          />
+          <Product
+            category="Aventura"
+            description="teteca aventureira"
+            infos={['-10%', 'R$ 150']}
+            system="IOS"
+            title="teteca curiosa"
+            image={'//placehold.it/222x250'}
+            key={title}
+          />
+
+          <Product
+            category="Ação"
+            description="teteca"
+            infos={['em breve']}
+            system="Windows"
+            title="teteca ultra"
+            image={'//placehold.it/222x250'}
+            key={title}
+          />
         </List>
-      </Container>
-    </div>
+      </div>
+    </Container>
   )
 }
 export default ProductsList

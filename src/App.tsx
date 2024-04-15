@@ -1,7 +1,7 @@
 import { GlobalCss } from './styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Home } from './pages/Home/Home'
-import ProductsList from './components/ProductsList'
+
 function App() {
   const rotas = createBrowserRouter([
     {
@@ -9,7 +9,6 @@ function App() {
       element: (
         <>
           <Home />
-          <ProductsList title="promoções" background="gray" />
         </>
       )
     }
