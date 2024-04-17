@@ -35,3 +35,4 @@ export const LinkCart = styled.a`
     margin-left: 16px;
   }
 `
+export const ImagemLink = styled(Link)``
