@@ -1,18 +1,10 @@
 import { BrowserRouter } from 'react-router-dom'
 
-import Rotas from './routes'
 import { GlobalCss } from './styles'
+
+import Rotas from './routes'
 import Header from './components/Header'
-
-/*    Maneira convencional de usar o rounter
-
-const rotas = createBrowserRounter([
-  {
-    path: '/' ,
-    element : <Home />
-  }
-])
-*/
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -22,7 +14,7 @@ function App() {
         <Header />
       </div>
       <Rotas />
-      {/* <RouterProvider router = {rotas} /> */}
+      <Footer />
     </BrowserRouter>
   )
 }
