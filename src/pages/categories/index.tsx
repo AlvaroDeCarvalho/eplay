@@ -83,7 +83,7 @@ const emBreve: Game[] = [
   }
 ]
 
-export const Categories = () => {
+const Categories = () => {
   return (
     <>
       <ProductsList games={promocoes} title="RPG" background="gray" />
@@ -93,3 +93,4 @@ export const Categories = () => {
     </>
   )
 }
+export default Categories
