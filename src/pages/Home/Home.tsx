@@ -15,7 +15,7 @@ export type Game = {
   release_date?: string
   prices?: {
     discount?: number
-    originalPrice?: number
+    old?: number
     current?: number
   }
   details: {
@@ -40,6 +40,10 @@ export const Home = () => {
     fetch('https://fake-api-tau.vercel.app/api/eplay/promocoes')
       .then((res) => res.json())
       .then((res) => setPromoces(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/eplay/em-breve')
+      .then((res) => res.json())
+      .then((res) => setEmBreve(res))
   }, [])
 
   return (

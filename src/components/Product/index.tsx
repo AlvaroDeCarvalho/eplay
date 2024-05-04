@@ -17,6 +17,12 @@ const Product = ({
   infos,
   system
 }: Props) => {
+  const getDescricao = (descricao: string) => {
+    if (descricao.length > 95) {
+      return descricao.slice(0, 92) + '...'
+    }
+    return descricao
+  }
   return (
     <S.Card>
       <S.ComponentesInfo>
@@ -28,7 +34,7 @@ const Product = ({
       <S.Titulo>{title}</S.Titulo>
       <Tag>{category}</Tag>
       <Tag>{system}</Tag>
-      <S.Paragrafo>{description}</S.Paragrafo>
+      <S.Paragrafo>{getDescricao(description)}</S.Paragrafo>
     </S.Card>
   )
 }

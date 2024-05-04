@@ -1,20 +1,33 @@
+import { useEffect, useState } from 'react'
 import Button from '../Button'
 import Tag from '../Tag'
 import * as S from './styles'
+import { Game } from '../../pages/Home/Home'
+
+import { formatPrice } from '../ProductsList/index'
 
 const Banner = () => {
+  const [game, setGame] = useState<Game>()
+
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/eplay/destaque')
+      .then((res) => res.json())
+      .then((res) => setGame(res))
+  }, [])
+
+  if (!game) {
+    return <h3>Carregando...</h3>
+  }
   return (
     <S.Imagem>
       <div className="container">
         <div>
           <Tag size="big">Destaque do dia</Tag>
-          <S.Titulo>
-            Marvel &apos;s Spider-Man: Miles Morales PS4 & PS5
-          </S.Titulo>
+          <S.Titulo>{game?.name}</S.Titulo>
 
           <S.precos>
-            De R$ <span>250,00</span> <br />
-            por apenas 99,99
+            De R$ <span>{formatPrice(game.prices?.old)}</span> <br />
+            por apenas {formatPrice(game.prices?.current)}
           </S.precos>
         </div>
         <Button

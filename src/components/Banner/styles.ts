@@ -3,6 +3,7 @@ import imagem from '../../assets/images/banner-homem-aranha.png'
 import { TagContainer } from '../Tag/styles'
 
 export const Imagem = styled.div`
+  position: relative;
   background-image: url(${imagem});
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,12 +18,22 @@ export const Imagem = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    z-index: 1;
   }
 
   ${TagContainer} {
     position: absolute;
     top: 32px;
     cursor: pointer;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    content: '';
   }
 `
 
