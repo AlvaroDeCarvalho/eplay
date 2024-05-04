@@ -1,4 +1,7 @@
+import { useState } from 'react'
+
 import Section from '../Section'
+import { GalleryItem } from '../../pages/Home/Home'
 
 import * as S from './styles'
 
@@ -8,19 +11,18 @@ import hogwarts from '../../assets/images/fundo_hogwarts.png'
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import fechar from '../../assets/images/fechar.png'
-import { useState } from 'react'
 
 const mock: GalleryItem[] = [
   {
-    type: 'imagem',
+    type: 'image',
     url: Zelda
   },
   {
-    type: 'imagem',
+    type: 'image',
     url: hogwarts
   },
   {
-    type: 'imagem',
+    type: 'image',
     url: spiderman
   },
   {
@@ -29,10 +31,6 @@ const mock: GalleryItem[] = [
   }
 ]
 
-interface GalleryItem {
-  type: 'imagem' | 'video'
-  url: string
-}
 type Props = {
   defaultCover: string
   name: string
@@ -45,25 +43,25 @@ interface ModalState extends GalleryItem {
 const Gallery = ({ defaultCover, name }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisibal: false,
-    type: 'imagem',
+    type: 'image',
     url: ''
   })
 
   const exitModal = () => {
     setModal({
       isVisibal: false,
-      type: 'imagem',
+      type: 'image',
       url: ''
     })
   }
 
   const getMediaCover = (item: GalleryItem) => {
-    if (item.type === 'imagem') return item.url
+    if (item.type === 'image') return item.url
     return defaultCover
   }
 
   const getMediaIcon = (item: GalleryItem) => {
-    if (item.type === 'imagem') return zoom
+    if (item.type === 'image') return zoom
     return play
   }
 
@@ -102,7 +100,7 @@ const Gallery = ({ defaultCover, name }: Props) => {
             <h4>{name}</h4>
             <img src={fechar} onClick={() => exitModal()} />
           </header>
-          {modal.type === 'imagem' ? (
+          {modal.type === 'image' ? (
             <img src={modal.url} />
           ) : (
             <iframe src={modal.url} frameBorder={0} />
