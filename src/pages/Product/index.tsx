@@ -3,39 +3,44 @@ import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
 
-import residentEvil from '../../assets/images/resident.png'
+import { useEffect, useState } from 'react'
+import { Game } from '../Home/Home'
 
 const Product = () => {
   const { id } = useParams()
+
+  const [game, setGame] = useState<Game>()
+
+  useEffect(() => {
+    fetch(`https://fake-api-tau.vercel.app/api/eplay/jogos/${id}`)
+      .then((res) => res.json())
+      .then((res) => setGame(res))
+  }, [id])
+
+  if (!game) {
+    return <h1>Carregando...</h1>
+  }
   return (
     <>
-      <Hero />
+      <Hero game={game} />
       <Section title="Sobre o jogo" background="black">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
-          facilis, doloribus placeat repudiandae obcaecati corporis sint,
-          eveniet dolorum qui velit pariatur. Fugit autem, consectetur neque
-          consequuntur nesciunt tenetur laboriosam expedita.
-        </p>
+        <p>{game.description}</p>
       </Section>
       <Section title="Mais detalhes" background="gray">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
-          facilis, doloribus placeat repudiandae obcaecati corporis sint,
-          eveniet dolorum qui velit pariatur. Fugit autem, consectetur neque
-          consequuntur nesciunt tenetur laboriosam expedita.Lorem ipsum dolor,
-          sit amet consectetur adipisicing elit. Itaque facilis, doloribus
-          placeat repudiandae obcaecati corporis sint, eveniet dolorum qui velit
-          pariatur. Fugit autem, consectetur neque consequuntur nesciunt tenetur
-          laboriosam expedita.Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Itaque facilis, doloribus placeat repudiandae
-          obcaecati corporis sint, eveniet dolorum qui velit pariatur. Fugit
-          autem, consectetur neque consequuntur nesciunt tenetur laboriosam
-          expedita.
+          <b>Plataforma:</b> {game.details.system}
+          <b>Desenvolvedor:</b> {game.details.developer}
+          <b>Idiomas:</b> O jogo oferece suporte para tais idiomas:
+          {game.details.languages.join(', ')}
+          <b>Editora:</b> {game.details.publisher}
         </p>
       </Section>
 
-      <Gallery defaultCover={residentEvil} name="Jogo teste" />
+      <Gallery
+        defaultCover={game.media.cover}
+        name={game.name}
+        itens={game.media.gallery}
+      />
     </>
   )
 }

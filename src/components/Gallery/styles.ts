@@ -80,6 +80,9 @@ export const ModalContent = styled.div`
       cursor: pointer;
     }
   }
+  > img {
+    width: 100%;
+  }
   img,
   iframe {
     display: block;

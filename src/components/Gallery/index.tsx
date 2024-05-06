@@ -5,42 +5,21 @@ import { GalleryItem } from '../../pages/Home/Home'
 
 import * as S from './styles'
 
-import Zelda from '../../assets/images/zelda.png'
-import spiderman from '../../assets/images/banner-homem-aranha.png'
-import hogwarts from '../../assets/images/fundo_hogwarts.png'
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import fechar from '../../assets/images/fechar.png'
 
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: Zelda
-  },
-  {
-    type: 'image',
-    url: hogwarts
-  },
-  {
-    type: 'image',
-    url: spiderman
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/vPBkhfhZ44o?si=VvktFZXNvIxapDUx'
-  }
-]
-
 type Props = {
   defaultCover: string
   name: string
+  itens: GalleryItem[]
 }
 
 interface ModalState extends GalleryItem {
   isVisibal: boolean
 }
 
-const Gallery = ({ defaultCover, name }: Props) => {
+const Gallery = ({ defaultCover, name, itens }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisibal: false,
     type: 'image',
@@ -69,7 +48,7 @@ const Gallery = ({ defaultCover, name }: Props) => {
     <>
       <Section title="Galeria" background="black">
         <S.Items>
-          {mock.map((item) => (
+          {itens.map((item) => (
             <>
               <S.Item
                 key={item.url}

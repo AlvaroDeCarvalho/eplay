@@ -19,11 +19,11 @@ const Banner = () => {
     return <h3>Carregando...</h3>
   }
   return (
-    <S.Imagem>
+    <S.Imagem backgroundBanner={game.media.cover}>
       <div className="container">
         <div>
           <Tag size="big">Destaque do dia</Tag>
-          <S.Titulo>{game?.name}</S.Titulo>
+          <S.Titulo>{game.name}</S.Titulo>
 
           <S.precos>
             De R$ <span>{formatPrice(game.prices?.old)}</span> <br />
@@ -32,7 +32,7 @@ const Banner = () => {
         </div>
         <Button
           type="link"
-          to="/produto"
+          to={`/product/${game.id}`}
           title="cloque aqui para apoveitar esta oferta"
         >
           Aproveitar

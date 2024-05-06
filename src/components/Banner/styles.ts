@@ -2,9 +2,13 @@ import styled from 'styled-components'
 import imagem from '../../assets/images/banner-homem-aranha.png'
 import { TagContainer } from '../Tag/styles'
 
-export const Imagem = styled.div`
+type Props = {
+  backgroundBanner: string
+}
+
+export const Imagem = styled.div<Props>`
   position: relative;
-  background-image: url(${imagem});
+  background-image: url(${(props) => props.backgroundBanner});
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

@@ -1,11 +1,14 @@
 import styled from 'styled-components'
-import BannerImage from '../../assets/images/fundo_hogwarts.png'
 import { Cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
-export const Banner = styled.div`
+type Props = {
+  backgroundCover: string
+}
+
+export const Banner = styled.div<Props>`
   position: relative;
-  background-image: url(${BannerImage});
+  background-image: url(${(props) => props.backgroundCover});
 
   background-repeat: no-repeat;
   background-size: 100%;
