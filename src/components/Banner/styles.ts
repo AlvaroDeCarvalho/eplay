@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import imagem from '../../assets/images/banner-homem-aranha.png'
 import { TagContainer } from '../Tag/styles'
 
 type Props = {
