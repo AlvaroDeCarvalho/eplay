@@ -3,12 +3,12 @@ import { Cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
 type Props = {
-  backgroundCover: string
+  backgroundcover: string
 }
 
 export const Banner = styled.div<Props>`
   position: relative;
-  background-image: url(${(props) => props.backgroundCover});
+  background-image: url(${(props) => props.backgroundcover});
 
   background-repeat: no-repeat;
   background-size: 100%;

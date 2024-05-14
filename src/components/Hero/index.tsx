@@ -1,4 +1,4 @@
-import { Game } from '../../pages/Home/Home'
+import { Game } from '../../pages/Home'
 import Button from '../Button'
 import Tag from '../Tag'
 import * as S from './styles'
@@ -12,7 +12,7 @@ type Props = {
 const Hero = ({ game }: Props) => {
   return (
     <>
-      <S.Banner backgroundCover={game.media.cover}>
+      <S.Banner backgroundcover={game.media.cover}>
         <div className="container">
           <div>
             <Tag>{game.details.category}</Tag>

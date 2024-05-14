@@ -8,7 +8,9 @@ const store = configureStore({
     cart: cartReducer,
     //acessando um objeto dentro de outro objeto. no caso o reducerPath é uma propiedade da nossa API
     [api.reducerPath]: api.reducer
-  }
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(api.middleware)
 })
 
 export type RootReducer = ReturnType<typeof store.getState>

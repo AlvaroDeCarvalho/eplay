@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import Section from '../Section'
-import { GalleryItem } from '../../pages/Home/Home'
+import { GalleryItem } from '../../pages/Home'
 
 import * as S from './styles'
 
