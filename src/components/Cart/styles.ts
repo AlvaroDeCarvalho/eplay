@@ -17,13 +17,17 @@ export const Overlay = styled.div`
 
 export const CartContainer = styled.div`
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
+
+  &.open {
+    display: flex;
+  }
 `
 export const SideBar = styled.aside`
   background: ${Cores.cinza};

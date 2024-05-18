@@ -1,15 +1,26 @@
-import { Game } from '../../pages/Home'
 import Button from '../Button'
 import Tag from '../Tag'
+import { Game } from '../../pages/Home'
+
 import * as S from './styles'
 
 import { formatPrice } from '../ProductsList/index'
+
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
 
 type Props = {
   game: Game
 }
 
 const Hero = ({ game }: Props) => {
+  const dispatch = useDispatch()
+
+  const addGameToCart = () => {
+    dispatch(add(game))
+    dispatch(open())
+  }
+
   return (
     <>
       <S.Banner backgroundcover={game.media.cover}>
@@ -30,7 +41,7 @@ const Hero = ({ game }: Props) => {
               )}
             </p>
             {game.prices?.current && (
-              <Button type="button" variant="primary">
+              <Button type="button" variant="primary" onClick={addGameToCart}>
                 Adicionar ao carrinho
               </Button>
             )}

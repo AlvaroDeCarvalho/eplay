@@ -9,6 +9,8 @@ const Product = () => {
   const { id } = useParams()
   const { data: game } = useGetGameQuery(id as string)
 
+  console.log(id)
+
   if (!game) {
     return <h1>Carregando...</h1>
   }

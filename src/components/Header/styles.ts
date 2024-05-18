@@ -29,7 +29,7 @@ export const Links = styled.ul`
 export const Elementos = styled(Link)`
   margin-right: 16px;
 `
-export const LinkCart = styled.a`
+export const CartButton = styled.a`
   display: flex;
   img {
     margin-left: 16px;
