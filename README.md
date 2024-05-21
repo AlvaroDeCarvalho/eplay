@@ -27,15 +27,15 @@
 Clone o este repositorio com o comando `git clone https://github.com/AlvaroDeCarvalho/eplay.git`
 
 #### ``npm i``
-instale as dependências que o projeto console
+instale as dependências que o projeto consome:
   - redux toolkit query
   - styles-componentes
-  - react rounter dom
+  - react-rounter-dom
+  - react-rounter-hash-link
   - eslint e prettier (para padronização de codigo)
-  - npm install
-  - npm start
 
  #### ``Abrir sistema``
+ - npm start
  - Click no link em local
  - [localhost:3000](http://localhost:3000)
 
