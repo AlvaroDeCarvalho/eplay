@@ -36,7 +36,7 @@ instale as dependências que o projeto console
   - npm start
 
  #### ``Abrir sistema``
- -Click no link em local
+ - Click no link em local
  - [localhost:3000](http://localhost:3000)
 
 ## ``1. Uso``
