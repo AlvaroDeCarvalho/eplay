@@ -6,6 +6,7 @@ export type Props = {
   title: string
   background: 'gray' | 'black'
   games: Game[]
+  id?: string
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
@@ -15,7 +16,7 @@ export const formatPrice = (price = 0) => {
     currency: 'BRL'
   }).format(price)
 }
-const ProductsList = ({ title, background, games }: Props) => {
+const ProductsList = ({ title, background, games, id }: Props) => {
   const getGameTags = (game: Game) => {
     //estamos criando um array onde ficarar armazenado nossas informações,
     // vamos fazer um push de acordo com a situação
@@ -37,7 +38,7 @@ const ProductsList = ({ title, background, games }: Props) => {
   }
 
   return (
-    <Container background={background}>
+    <Container background={background} id={id}>
       <div className="container">
         <h2>{title}</h2>
         <List>

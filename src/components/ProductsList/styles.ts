@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { TagContainer } from '../Tag/styles'
 import { Props } from '.'
-import { Cores } from '../../styles'
+import { Cores, breakPoints } from '../../styles'
 import { Card } from '../Product/styles'
 export const Container = styled.section<Omit<Props, 'games' | 'title'>>`
   padding: 32px;
@@ -25,4 +25,11 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 24px;
+
+  @media (max-width: ${breakPoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: ${breakPoints.tablet}) {
+    grid-template-columns: 1fr;
+  }
 `

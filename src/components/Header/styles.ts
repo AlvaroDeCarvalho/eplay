@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Cores } from '../../styles'
+import { Cores, breakPoints } from '../../styles'
 export const HeaderBar = styled.header`
   display: flex;
   align-items: center;
@@ -19,6 +19,10 @@ export const HeaderBar = styled.header`
   div {
     align-items: center;
     display: flex;
+  }
+
+  @media (max-width: ${breakPoints.tablet}) {
+    display: none;
   }
 `
 export const Links = styled.ul`
