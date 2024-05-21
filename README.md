@@ -14,12 +14,12 @@
 
 ## Instalação
 
-#### Pré-requisitos
+#### Setup de ambiente:
 
 - [Node.js](https://nodejs.org/) (versão 14 ou superior)
 - [npm](https://www.npmjs.com/) (Node.js)
 
-## Passos
+## Passos para rodar na minha máquina:
 
 ### ``clone do repositorio``
 
@@ -32,6 +32,12 @@ instale as dependências que o projeto console
   - styles-componentes
   - react rounter dom
   - eslint e prettier (para padronização de codigo)
+  - npm install
+  - npm start
+
+ #### ``Abrir sistema``
+ -Click no link em local
+ - [localhost:3000](http://localhost:3000)
 
 ## ``1. Uso``
 
