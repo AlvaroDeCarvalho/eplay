@@ -17,6 +17,10 @@ export const Row = styled.div<RowProps>`
   column-gap: 24px;
   margin-top: ${(props) => props.marginTop || '0px'};
   align-items: flex-end;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `
 
 export const InputGroup = styled.div<InputGroupProps>`
@@ -34,6 +38,10 @@ export const InputGroup = styled.div<InputGroupProps>`
     height: 32px;
     padding: 0 8px;
     width: ${(props) => (props.maxWidth ? props.maxWidth : '100%')};
+
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+    }
   }
 `
 
