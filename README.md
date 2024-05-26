@@ -47,7 +47,7 @@ Ao acessar e utilizar o eplay  você concorda em cumprir e ficar vinculado aos s
 
 
 
-### ``2. Uso do site``
+## ``2. Uso do site``
 
 #### ``2.1. Licença Limitada``
 Concedemos a você uma licença limitada, não exclusiva e intransferível para acessar e usar o eplay para fins pessoais e não comerciais.
