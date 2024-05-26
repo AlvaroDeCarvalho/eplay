@@ -28,11 +28,12 @@ Clone o este repositorio com o comando `git clone https://github.com/AlvaroDeCar
 
 #### ``npm i``
 instale as dependências que o projeto consome:
-  - redux toolkit query
-  - styles-componentes
-  - react-rounter-dom
-  - react-rounter-hash-link
+  - redux toolkit query (pacote json para transição de propiedades entre componentes)
+  - styles-componentes (estilização atravês do typescript)
+  - react-rounter-dom (navegação da aplicação)
+  - react-rounter-hash-link (direcionamento dos links)
   - eslint e prettier (para padronização de codigo)
+  - yup e formik (para a validação e logica dos formularios)
 
  #### ``Abrir sistema``
  - npm start
