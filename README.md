@@ -28,11 +28,12 @@ Clone o este repositorio com o comando `git clone https://github.com/AlvaroDeCar
 
 #### ``npm i``
 instale as dependências que o projeto consome:
-  - redux toolkit query
-  - styles-componentes
-  - react-rounter-dom
-  - react-rounter-hash-link
+  - redux toolkit query (pacote json para transição de propiedades entre componentes)
+  - styles-componentes (estilização atravês do typescript)
+  - react-rounter-dom (navegação da aplicação)
+  - react-rounter-hash-link (direcionamento dos links)
   - eslint e prettier (para padronização de codigo)
+  - yup e formik (para a validação e logica dos formularios)
 
  #### ``Abrir sistema``
  - npm start
@@ -46,7 +47,7 @@ Ao acessar e utilizar o eplay  você concorda em cumprir e ficar vinculado aos s
 
 
 
-### ``2. Uso do site``
+## ``2. Uso do site``
 
 #### ``2.1. Licença Limitada``
 Concedemos a você uma licença limitada, não exclusiva e intransferível para acessar e usar o eplay para fins pessoais e não comerciais.
