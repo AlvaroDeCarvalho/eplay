@@ -26,6 +26,9 @@ export const Row = styled.div<RowProps>`
 export const InputGroup = styled.div<InputGroupProps>`
   //o flex:auto: a largura disponivel sera destribuida igualmente entre os elementos
   flex: auto;
+  height: 80px;
+
+  width: 100%;
   label,
   select {
     font-size: 14px;
@@ -42,6 +45,10 @@ export const InputGroup = styled.div<InputGroupProps>`
     @media (max-width: 768px) {
       margin-bottom: 16px;
     }
+  }
+
+  small {
+    color: #ff8383;
   }
 `
 
