@@ -48,10 +48,10 @@ const Gallery = ({ defaultCover, name, itens }: Props) => {
     <>
       <Section title="Galeria" background="black">
         <S.Items>
-          {itens.map((item) => (
+          {itens.map((item, index) => (
             <>
               <S.Item
-                key={item.url}
+                key={index}
                 onClick={() => {
                   setModal({
                     isVisibal: true,
