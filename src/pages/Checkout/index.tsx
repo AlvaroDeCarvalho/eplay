@@ -76,9 +76,9 @@ const Checkout = () => {
     onSubmit: (values) => {
       purchase({
         billing: {
-          name: values.fullName,
+          document: values.cpf,
           email: values.email,
-          document: values.cpf
+          name: values.fullName
         },
         delivery: {
           email: values.deliveryEmail
@@ -86,16 +86,17 @@ const Checkout = () => {
         payment: {
           installments: 1,
           card: {
-            name: values.cardDisplayName,
-            code: Number(values.cvv),
             active: payWithCard,
+            code: Number(values.cvv),
+            name: values.cardDisplayName,
+            number: values.cardNumber,
             owner: {
-              name: values.cardOwner,
-              document: values.cpfCardOwner
+              document: values.cpfCardOwner,
+              name: values.cardOwner
             },
             expires: {
-              month: 1,
-              year: 2024
+              year: 2023,
+              month: 1
             }
           }
         },
@@ -190,14 +191,14 @@ const Checkout = () => {
         <>
           <div>
             <S.TabButton
-              isActive={!payWithCard}
+              active={!payWithCard}
               onClick={() => setPayWithCard(false)}
             >
               <img src={boleto} alt="" />
               Boleto bancário
             </S.TabButton>
             <S.TabButton
-              isActive={payWithCard}
+              active={payWithCard}
               onClick={() => setPayWithCard(true)}
             >
               <img src={cartao} alt="" />
@@ -345,7 +346,9 @@ const Checkout = () => {
           </div>
         </>
       </Card>
-      <Button type="button">Finalizar compra</Button>
+      <Button type="button" onClick={form.handleSubmit}>
+        Finalizar compra
+      </Button>
     </form>
   )
 }

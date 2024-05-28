@@ -9,7 +9,7 @@ type RowProps = {
 }
 
 type TabButtonProps = {
-  isActive: boolean
+  active: boolean
 }
 
 export const Row = styled.div<RowProps>`
@@ -57,7 +57,7 @@ export const TabButton = styled.button<TabButtonProps>`
   border-radius: 8px;
   font-weight: bold;
   color: ${Cores.branca};
-  background-color: ${(props) => (props.isActive ? Cores.verde : Cores.preto)};
+  background-color: ${(props) => (props.active ? '#10AC84' : '#111')};
   height: 32px;
   border: none;
   margin-left: 32px;
