@@ -4,6 +4,7 @@ import { TagContainer } from '../Tag/styles'
 import { Props } from '.'
 import { Cores } from '../../styles'
 import { Card } from '../Product/styles'
+
 export const Container = styled.section<Omit<Props, 'title' | 'children'>>`
   padding: 32px;
   background-color: ${(props) =>

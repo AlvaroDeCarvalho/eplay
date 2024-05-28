@@ -1,9 +1,9 @@
 import Button from '../Button'
 import Tag from '../Tag'
-import { Game } from '../../pages/Home'
 
 import * as S from './styles'
 
+import { Game } from '../../pages/Home'
 import { formatPrice } from '../ProductsList/index'
 
 import { useDispatch } from 'react-redux'

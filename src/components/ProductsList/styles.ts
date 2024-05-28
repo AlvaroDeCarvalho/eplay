@@ -1,8 +1,11 @@
 import styled from 'styled-components'
-import { TagContainer } from '../Tag/styles'
+
 import { Props } from '.'
+
+import { TagContainer } from '../Tag/styles'
 import { Cores, breakPoints } from '../../styles'
 import { Card } from '../Product/styles'
+
 export const Container = styled.section<Omit<Props, 'games' | 'title'>>`
   padding: 32px;
   background-color: ${(props) =>

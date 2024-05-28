@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+
 import { Cores } from '../../styles'
 import { HashLink } from 'react-router-hash-link'
+
 export const Container = styled.footer`
   background-color: ${Cores.cinza};
   padding: 32px 0;

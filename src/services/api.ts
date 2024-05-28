@@ -67,6 +67,7 @@ const api = createApi({
     getGame: builder.query<Game, string>({
       query: (id) => `jogos/${id}`
     }),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     purchase: builder.mutation<any, PurchasePayload>({
       query: (body) => ({
         url: 'checkout',
