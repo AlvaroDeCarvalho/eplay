@@ -30,7 +30,7 @@ const Button = ({
     )
   }
   return (
-    <ButtonLink title={title} to={to as string}>
+    <ButtonLink title={title} to={to as string} variant={variant} type="link">
       {children}
     </ButtonLink>
   )
