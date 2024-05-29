@@ -3,16 +3,16 @@ import styled from 'styled-components'
 import { Props } from '.'
 
 import { TagContainer } from '../Tag/styles'
-import { Cores, breakPoints } from '../../styles'
+import { colors, breakPoints } from '../../styles'
 import { Card } from '../Product/styles'
 
 export const Container = styled.section<Omit<Props, 'games' | 'title'>>`
   padding: 32px;
   background-color: ${(props) =>
-    props.background === 'black' ? Cores.preto : Cores.cinza};
+    props.background === 'black' ? colors.black : colors.gray};
   ${Card} {
     background-color: ${(props) =>
-      props.background === 'black' ? Cores.cinza : Cores.preto};
+      props.background === 'black' ? colors.gray : colors.black};
   }
   h2 {
     font-size: 18px;

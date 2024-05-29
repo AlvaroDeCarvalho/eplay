@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 
-import { Cores } from '../../styles'
+import { colors } from '../../styles'
 import { Link } from 'react-router-dom'
 
 import { Props } from '.'
 
 export const ButtonContainer = styled.button<Props>`
   background-color: ${(props) =>
-    props.variant === 'primary' ? Cores.verde : 'transparent'};
+    props.variant === 'primary' ? colors.gray : 'transparent'};
   padding: 8px 16px;
   border: ${(props) =>
-    props.variant === 'primary' ? Cores.verde : Cores.branca};
-  color: ${Cores.branca};
+    props.variant === 'primary' ? colors.green : colors.white};
+  color: ${colors.white};
   font-size: 16px;
   font-weight: bold;
   border-radius: 8px;
@@ -19,11 +19,11 @@ export const ButtonContainer = styled.button<Props>`
 
 export const ButtonLink = styled(Link)<Props>`
   background-color: ${(props) =>
-    props.variant === 'primary' ? Cores.verde : 'transparent'};
+    props.variant === 'primary' ? colors.green : 'transparent'};
   position: relative;
   padding: 8px 16px;
-  border: 2px solid ${Cores.branca};
-  color: ${Cores.branca};
+  border: 2px solid ${colors.white};
+  color: ${colors.white};
   font-size: 16px;
   font-weight: bold;
   border-radius: 8px;

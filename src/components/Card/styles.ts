@@ -1,16 +1,16 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Container = styled.div`
   border-radius: 8px;
-  background-color: ${Cores.cinza};
+  background-color: ${colors.gray};
   padding: 24px;
   margin-bottom: 40px;
   h2,
   h3 {
     margin-bottom: 24px;
     font-weight: bold;
-    color: ${Cores.branca};
+    color: ${colors.white};
     margin-bottom: 24px;
   }
 

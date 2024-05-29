@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { colors } from '../../styles'
 
 type InputGroupProps = {
   maxWidth?: string
@@ -36,8 +36,8 @@ export const InputGroup = styled.div<InputGroupProps>`
     display: block;
   }
   input {
-    border: 1px solid ${Cores.branca};
-    background-color: ${Cores.branca};
+    border: 1px solid ${colors.white};
+    background-color: ${colors.white};
     height: 32px;
     padding: 0 8px;
     width: ${(props) => (props.maxWidth ? props.maxWidth : '100%')};
@@ -56,7 +56,7 @@ export const TabButton = styled.button<TabButtonProps>`
   padding: 0px 8px;
   border-radius: 8px;
   font-weight: bold;
-  color: ${Cores.branca};
+  color: ${colors.white};
   background-color: ${(props) => (props.active ? '#10AC84' : '#111')};
   height: 32px;
   border: none;

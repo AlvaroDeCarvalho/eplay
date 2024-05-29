@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { Link } from 'react-router-dom'
-import { Cores, breakPoints } from '../../styles'
+import { colors, breakPoints } from '../../styles'
 
 export const Links = styled.ul`
   display: flex;
@@ -15,13 +15,13 @@ export const Links = styled.ul`
 
 export const HeaderBar = styled.header`
   padding: 24px;
-  background-color: ${Cores.cinza};
+  background-color: ${colors.gray};
   border-radius: 16px;
   margin-top: 40px;
   margin-bottom: 80px;
 
   a {
-    color: ${Cores.branca};
+    color: ${colors.white};
     text-decoration: none;
     font-weight: bold;
   }
@@ -87,7 +87,7 @@ export const Hamburguer = styled.div`
     display: block;
     width: 100%;
     height: 2px;
-    background-color: ${Cores.branca};
+    background-color: ${colors.white};
     margin-bottom: 4px;
   }
   @media (min-width: 767px) {
