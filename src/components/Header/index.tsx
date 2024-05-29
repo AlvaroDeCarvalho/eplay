@@ -1,5 +1,7 @@
 import * as S from './styles'
 
+import { HashLink } from 'react-router-hash-link'
+
 import logo from '../../assets/images/logo.svg'
 import carrinho from '../../assets/images/carrinho.svg'
 
@@ -9,6 +11,7 @@ import { useSelector } from 'react-redux'
 import { open } from '../../store/reducers/cart'
 import { RootReducer } from '../../store'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -35,13 +38,31 @@ const Header = () => {
           <nav>
             <S.Links>
               <S.Elementos to={'/categorias'}>
-                <a href="#">Categorias</a>
+                <Link
+                  to="/categorias"
+                  title="clique aqui para acessar a seção de categorias"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Categorias
+                </Link>
               </S.Elementos>
               <S.Elementos to={'/novidades'}>
-                <a href="#">Novidades</a>
+                <HashLink
+                  to="#coming-soon"
+                  title="clique aqui para acessar a seção de Novidades"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Novidades
+                </HashLink>
               </S.Elementos>
               <S.Elementos to={'/promocoes'}>
-                <a href="#">Promoções</a>
+                <HashLink
+                  to="#on-sale"
+                  title="clique aqui para acessar a seção de promoções"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Promoções
+                </HashLink>
               </S.Elementos>
             </S.Links>
           </nav>
@@ -56,13 +77,19 @@ const Header = () => {
       <S.navMobile className={isMenuOpen ? 'is-open' : ''}>
         <S.Links>
           <S.Elementos to={'/categorias'}>
-            <a href="#">Categorias</a>
+            <a href="#" title="clique aqui para acessar a seção de categorias">
+              Categorias
+            </a>
           </S.Elementos>
           <S.Elementos to={'/novidades'}>
-            <a href="#">Novidades</a>
+            <a href="#" title="clique aqui para acessar a seção de Novidades">
+              Novidades
+            </a>
           </S.Elementos>
           <S.Elementos to={'/promocoes'}>
-            <a href="#">Promoções</a>
+            <a href="#" title="clique aqui para acessar a seção de promoções">
+              Promoções
+            </a>
           </S.Elementos>
         </S.Links>
       </S.navMobile>
