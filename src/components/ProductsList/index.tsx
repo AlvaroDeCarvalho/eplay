@@ -3,6 +3,7 @@ import Product from '../Product'
 import { Game } from '../../pages/Home'
 
 import { Container, List } from './styles'
+import { formatPrice } from '../../utils'
 
 export type Props = {
   title: string
@@ -12,12 +13,7 @@ export type Props = {
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
-export const formatPrice = (price = 0) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(price)
-}
+
 const ProductsList = ({ title, background, games, id }: Props) => {
   const getGameTags = (game: Game) => {
     //estamos criando um array onde ficarar armazenado nossas informações,

@@ -2,7 +2,7 @@ import Button from '../Button'
 import Tag from '../Tag'
 import * as S from './styles'
 
-import { formatPrice } from '../ProductsList/index'
+import { formatPrice } from '../../utils'
 
 import { useGetFeaturedGameQuery } from '../../services/api'
 

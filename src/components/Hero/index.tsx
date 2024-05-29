@@ -4,7 +4,7 @@ import Tag from '../Tag'
 import * as S from './styles'
 
 import { Game } from '../../pages/Home'
-import { formatPrice } from '../ProductsList/index'
+import { formatPrice } from '../../utils/'
 
 import { useDispatch } from 'react-redux'
 import { add, open } from '../../store/reducers/cart'
