@@ -7,7 +7,7 @@ import { Props } from '.'
 
 export const ButtonContainer = styled.button<Props>`
   background-color: ${(props) =>
-    props.variant === 'primary' ? colors.gray : 'transparent'};
+    props.variant === 'primary' ? colors.green : 'transparent'};
   padding: 8px 16px;
   border: ${(props) =>
     props.variant === 'primary' ? colors.green : colors.white};

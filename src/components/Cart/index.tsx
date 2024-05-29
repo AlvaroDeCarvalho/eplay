@@ -54,7 +54,9 @@ const Cart = () => {
           Total de {formatPrice(getTotalPrice())}{' '}
           <span>Em até 6x sem juros</span>
         </S.Prices>
-        <Button type="button">Continuar com a compra</Button>
+        <Button type="link" to="/checkout" onClick={closeCart}>
+          Continuar com a compra
+        </Button>
       </S.SideBar>
     </S.CartContainer>
   )
