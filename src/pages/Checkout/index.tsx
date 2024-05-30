@@ -1,3 +1,10 @@
+import { useEffect, useState } from 'react'
+import { useFormik } from 'formik'
+import { usePurchaseMutation } from '../../services/api'
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
+import { Navigate } from 'react-router-dom'
+
 import Button from '../../components/Button'
 import Card from '../../components/Card'
 
@@ -7,15 +14,38 @@ import barCode from '../../assets/images/boleto.png'
 import cartao from '../../assets/images/cartao.png'
 
 import * as Yup from 'yup'
+import { formatPrice, getTotalPrice } from '../../utils'
 
-import { useState } from 'react'
-import { useFormik } from 'formik'
-import { usePurchaseMutation } from '../../services/api'
+type Installment = {
+  quantily: number
+  amount: number
+  amountFormated: string
+}
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
-
   const [purchase, { data, isSuccess }] = usePurchaseMutation()
+  const { items } = useSelector((state: RootReducer) => state.cart)
+  const [installment, setInstallment] = useState<Installment[]>([])
+
+  const totalPrice = getTotalPrice(items)
+  useEffect(() => {
+    const calculatorInstallments = () => {
+      const installmentArray: Installment[] = []
+
+      for (let i = 1; i < 6; i++) {
+        installmentArray.push({
+          quantily: i,
+          amount: totalPrice / i,
+          amountFormated: formatPrice(totalPrice / i)
+        })
+      }
+      return installmentArray
+    }
+    if (totalPrice) {
+      setInstallment(calculatorInstallments())
+    }
+  }, [totalPrice])
 
   const form = useFormik({
     initialValues: {
@@ -107,15 +137,18 @@ const Checkout = () => {
       })
     }
   })
-  console.log(form)
   const getErrorMensage = (field: string, message?: string) => {
     const isTouched = field in form.touched
     const isInvelid = field in form.errors
     if (isTouched && isInvelid) {
       return message
     }
+    if (items.length === 0) {
+      return <Navigate to="/" />
+    }
     return ''
   }
+
   return (
     <div className="container">
       {isSuccess ? (
@@ -384,9 +417,11 @@ const Checkout = () => {
                           onChange={form.handleChange}
                           onBlur={form.handleBlur}
                         >
-                          <option value="1">1x de R$ 100,00</option>
-                          <option value="2">2x de R$ 50,00</option>
-                          <option value="3">3x de R$ 33,33</option>
+                          {installment.map((item) => (
+                            <option value={item.quantily} key={item.amount}>
+                              {item.quantily}x de {item.amountFormated}{' '}
+                            </option>
+                          ))}
                         </select>
                       </S.InputGroup>
                     </S.Row>

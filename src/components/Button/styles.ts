@@ -15,11 +15,11 @@ export const ButtonContainer = styled.button<Props>`
   font-size: 16px;
   font-weight: bold;
   border-radius: 8px;
+  cursor: pointer;
 `
 
-export const ButtonLink = styled(Link)<Props>`
-  background-color: ${(props) =>
-    props.variant === 'primary' ? colors.green : 'transparent'};
+export const ButtonLink = styled(Link)`
+  background-color: 'transparent';
   position: relative;
   padding: 8px 16px;
   border: 2px solid ${colors.white};
@@ -28,6 +28,7 @@ export const ButtonLink = styled(Link)<Props>`
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
+  cursor: pointer;
 
   &::after {
     content: '';
