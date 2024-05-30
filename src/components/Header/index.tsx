@@ -3,7 +3,7 @@ import * as S from './styles'
 import { HashLink } from 'react-router-hash-link'
 
 import logo from '../../assets/images/logo.svg'
-import carrinho from '../../assets/images/carrinho.svg'
+import cartIcon from '../../assets/images/carrinho.svg'
 
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
@@ -70,7 +70,7 @@ const Header = () => {
         <S.CartButton onClick={openCart}>
           <p>{items.length}</p>
           <span> - produto(s)</span>
-          <img src={carrinho} />
+          <img src={cartIcon} />
         </S.CartButton>
       </S.headerRow>
 

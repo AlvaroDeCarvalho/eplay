@@ -14,16 +14,16 @@ const Banner = () => {
     return <h3>Carregando...</h3>
   }
   return (
-    <S.Imagem backgroundBanner={game.media.cover}>
+    <S.Image backgroundBanner={game.media.cover}>
       <div className="container">
         <div>
           <Tag size="big">Destaque do dia</Tag>
-          <S.Titulo>{game.name}</S.Titulo>
+          <S.Title>{game.name}</S.Title>
 
-          <S.precos>
+          <S.Prices>
             De R$ <span>{formatPrice(game.prices?.old)}</span> <br />
             por apenas {formatPrice(game.prices?.current)}
-          </S.precos>
+          </S.Prices>
         </div>
         <Button
           type="link"
@@ -34,7 +34,7 @@ const Banner = () => {
           Aproveitar
         </Button>
       </div>
-    </S.Imagem>
+    </S.Image>
   )
 }
 

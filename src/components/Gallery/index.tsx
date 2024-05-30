@@ -78,7 +78,7 @@ const Gallery = ({ defaultCover, name, itens }: Props) => {
         <S.ModalContent className="container">
           <header>
             <h4>{name}</h4>
-            <img src={fechar} onClick={() => exitModal()} />
+            <img src={fechar} onClick={exitModal} />
           </header>
           {modal.type === 'image' ? (
             <img src={modal.url} />
@@ -86,7 +86,7 @@ const Gallery = ({ defaultCover, name, itens }: Props) => {
             <iframe src={modal.url} frameBorder={0} />
           )}
         </S.ModalContent>
-        <div className="overlay" onClick={() => exitModal()}></div>
+        <div className="overlay" onClick={exitModal}></div>
       </S.Modal>
     </>
   )

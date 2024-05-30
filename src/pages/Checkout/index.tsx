@@ -3,7 +3,7 @@ import Card from '../../components/Card'
 
 import * as S from './styles'
 
-import boleto from '../../assets/images/boleto.png'
+import barCode from '../../assets/images/boleto.png'
 import cartao from '../../assets/images/cartao.png'
 
 import * as Yup from 'yup'
@@ -243,7 +243,7 @@ const Checkout = () => {
                   active={!payWithCard}
                   onClick={() => setPayWithCard(false)}
                 >
-                  <img src={boleto} alt="" />
+                  <img src={barCode} alt="" />
                   Boleto bancário
                 </S.TabButton>
                 <S.TabButton

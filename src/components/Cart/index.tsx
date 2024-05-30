@@ -51,7 +51,7 @@ const Cart = () => {
         </ul>
         <S.Quantity>{items.length} Jogos no carrinho</S.Quantity>
         <S.Prices>
-          Total de {formatPrice(getTotalPrice())}{' '}
+          Total de {formatPrice(getTotalPrice())}
           <span>Em até 6x sem juros</span>
         </S.Prices>
         <Button type="link" to="/checkout" onClick={closeCart}>

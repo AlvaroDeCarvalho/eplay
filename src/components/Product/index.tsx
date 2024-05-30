@@ -19,24 +19,24 @@ const Product = ({
   system,
   id
 }: Props) => {
-  const getDescricao = (descricao: string) => {
-    if (descricao.length > 95) {
-      return descricao.slice(0, 92) + '...'
+  const getDescricao = (text: string) => {
+    if (text.length > 95) {
+      return text.slice(0, 92) + '...'
     }
-    return descricao
+    return text
   }
   return (
     <S.Card to={`/product/${id}`}>
-      <S.ComponentesInfo>
+      <S.ComponentsInfos>
         {infos.map((info) => (
           <Tag key={info}>{info}</Tag>
         ))}
-      </S.ComponentesInfo>
+      </S.ComponentsInfos>
       <img src={image} alt={title} />
-      <S.Titulo>{title}</S.Titulo>
+      <S.Title>{title}</S.Title>
       <Tag>{category}</Tag>
       <Tag>{system}</Tag>
-      <S.Paragrafo>{getDescricao(description)}</S.Paragrafo>
+      <S.Text>{getDescricao(description)}</S.Text>
     </S.Card>
   )
 }
