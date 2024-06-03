@@ -1,4 +1,3 @@
-import { Game } from '../pages/Home'
 
 export const formatPrice = (price = 0) => {
   return new Intl.NumberFormat('pt-BR', {

@@ -3,7 +3,6 @@ import Tag from '../Tag'
 
 import * as S from './styles'
 
-import { Game } from '../../pages/Home'
 import { formatPrice } from '../../utils/'
 
 import { useDispatch } from 'react-redux'

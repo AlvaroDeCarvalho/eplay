@@ -159,7 +159,7 @@ const Checkout = () => {
               sucesso! <br />
               Abaixo estão os detalhes da sua compra: <br />
               Número do pedido: {data.orderId}
-              <br /> Forma de pagamento:{' '}
+              <br /> Forma de pagamento:PurscheResponse
               {payWithCard ? 'Cartão de crédito' : 'Boleto bancário'}
             </p>
             <p className="margin-top">
