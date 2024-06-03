@@ -39,6 +39,7 @@ carrinho)
 
 ## Modelo de Dados
 -Diagramas(UML, Entidade e Relacionamentos, Lógico)
+
 [DiagramasProjeto.zip](https://github.com/user-attachments/files/15529452/DiagramasProjeto.zip)
 
 
