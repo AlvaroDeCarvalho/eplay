@@ -102,15 +102,15 @@ online.
 
 #### Caso de uso de usuário:
 
-Ator Principal
+- Ator Principal
  • Usuário (cliente do site)
-Objetivo
+- Objetivo
  • Comprar um jogo de videogame através do site.
-Pré-condições
+- Pré-condições
  • O usuário deve ter acesso à internet e um dispositivo compatível (computador, tablet,
 smartphone).
  • O usuário deve possuir uma forma de pagamento válida.
-Pós-condições
+- Pós-condições
  • O jogo é adicionado ao carrinho de compras.
  • O usuário realiza o pagamento e recebe uma confirmação da compra.
 
