@@ -71,30 +71,30 @@ sem dificuldades significativas.
 
 #### Critérios de uso:
 
-Navegação e Usabilidade:
+1. Navegação e Usabilidade:
  ◦ Clareza e Simplicidade: site fácil de navegar com categorias bem definidas como
 "Categorias", "Novidades", "Promoções".
  ◦ Barra de Pesquisa: Disponibilidade de uma barra de pesquisa para facilitar a
 localização de produtos específicos.
  ◦ Carrinho de Compras: O ícone do carrinho de compras claramente visível e fácil de
 acessar, mostrando o número de itens no carrinho.
- 2. Informações de Produtos:
+2. Informações de Produtos:
  ◦ Detalhamento: Cada produto tem uma descrição detalhada, incluindo o preço,
 descontos (se houver), e uma imagem clara do produto.
  ◦ Categorias e Filtros: Produtos devem ser categorizados corretamente (RPG, Ação,
 Esportes, etc.) e filtros devem estar disponíveis para ajudar na busca.
- 3. Processo de Compra:
+3. Processo de Compra:
  ◦ Facilidade: O processo de compra deve ser intuitivo, com passos claros para
 adicionar itens ao carrinho e finalizar a compra.
  ◦ Formas de Pagamento: Boleto e cartão de crédito, aos quais anteriormente á
 conclusão, o preenchimento de dados é obrigatório, e para cartão, preenchimento de
 dados do dono do cartão também é, incluindo parcelamento, como mostrado no EPLAY
- 4. Design e Estética:
+4. Design e Estética:
  ◦ Aparência: O site tem um design moderno e atraente, utilizando cores e imagens de
 alta qualidade.
  ◦ Responsividade: O site é responsivo e funciona bem em diferentes dispositivos e
 tamanhos de tela.
- 5. Segurança e Privacidade:
+5. Segurança e Privacidade:
  ◦ Proteção de Dados: As informações dos usuários são protegidas por criptografia e
 políticas de privacidade claras estaão disponíveis.
  ◦ Certificados: Uso de certificados de segurança (HTTPS) para proteger transações
