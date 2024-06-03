@@ -9,6 +9,7 @@
 - [Modelo de Dados](#ModelodeDados)
 - [Metodologia Rprocess](#MetodologiaRprocess)
 - [Protótipo](#Prototipo)
+- [Regras de negócio](#RegrasNegocio)
 - [Instalação](#instalação)
 - [Uso](#uso)
 - [Contribuição](#contribuição)
@@ -48,7 +49,7 @@ carrinho)
 #### Critérios aceitos:
 
 Funcionalidade:
- ◦ Links e Botões: Todos os links e botões funcionam corretamente e levam o usuário à
+1. Links e Botões: Todos os links e botões funcionam corretamente e levam o usuário à
 página correta.
  ◦ Carrinho de Compras: É possível adicionar, remover e alterar a quantidade de
 produtos no carrinho de forma eficiente.
@@ -132,6 +133,12 @@ entendimento e objetividade.
 #### Figma:
 
 - [Figma](https://www.figma.com/design/FiFpwvwwHX0rCbrXatjMg4/EPLAY?node-id=1-3&t=8EA9tb40JQ65zbBu-0)
+
+
+## Regras de Negócio:
+
+#### Tabela de Identificação:
+- [TabelaIdentificacao.zip](https://github.com/user-attachments/files/15529963/TabelaIdentificacao.zip)
 
 
 ## Instalação
