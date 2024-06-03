@@ -103,7 +103,7 @@ online.
 #### Caso de uso de usuário:
 
 - Ator Principal:
--  Usuário (cliente do site)
+  -  Usuário (cliente do site)
 - Objetivo:
   - Comprar um jogo de videogame através do site.
 - Pré-condições:
