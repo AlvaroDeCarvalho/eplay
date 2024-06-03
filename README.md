@@ -5,12 +5,133 @@
 
 ## Índice
 
+- [Requisitos](#Requisitos)
+- [Modelo de Dados](#ModelodeDados)
+- [Metodologia Rprocess](#MetodologiaRprocess)
+- [Protótipo](#Prototipo)
 - [Instalação](#instalação)
 - [Uso](#uso)
 - [Contribuição](#contribuição)
 - [Licença](#Licença)
 - [Autores](#autores)
 - [Agradecimentos](#agradecimentos)
+
+
+## Requisitos:
+
+#### Funcionais:
+-Exibir produtos
+-Adicionar os produtos ao carrinho
+-Exibir promoções
+-Exibir categorias do produto
+-Exibir os produtos adicionados ao carrinho
+-Exibir preço dos produtos
+-Exibir valor final das compras(soma dos valores dos produtos que foram adionados ao
+carrinho)
+-Remover produtos do carrinho
+
+#### Não-funcionais:
+-O programa deve ser implementado em Javascript
+-Cores da interface: Cinza, preto, branco, verde
+-Software Multiplataforma
+-Modelagem UML em StarUML
+
+
+## Modelo de Dados
+-Diagramas(UML, Entidade e Relacionamentos, Lógico)
+[DiagramasProjeto.zip](https://github.com/user-attachments/files/15529452/DiagramasProjeto.zip)
+
+
+## Metodologia Rprocess
+
+#### Critérios aceitos:
+
+Funcionalidade:
+ ◦ Links e Botões: Todos os links e botões funcionam corretamente e levam o usuário à
+página correta.
+ ◦ Carrinho de Compras: É possível adicionar, remover e alterar a quantidade de
+produtos no carrinho de forma eficiente.
+ 2. Performance:
+ ◦ Carregamento: As páginas do site carregam rapidamente, mesmo com múltiplos
+produtos exibidos.
+ ◦ Compatibilidade: O site é compatível com os principais navegadores (Chrome,
+Firefox, Safari, etc.).
+ 3. Conteúdo:
+ ◦ Precisão das Informações: Todas as informações exibidas, como preços e
+descrições de produtos, estão corretas e atualizadas.
+ ◦ Ortografia e Gramática: O texto no site está livre de erros gramaticais e ortográficos,
+deixando-o ainda mais fácil na utilização do usuário
+ 4. Experiência do Usuário:
+ ◦ Feedback Positivo: O site foi testado por um grupo de usuários e recebeu feedback
+positivo sobre a usabilidade e design.
+ ◦ Facilidade de Uso: Novos usuários são capazes de navegar e realizar uma compra
+sem dificuldades significativas.
+
+#### Critérios de uso:
+
+Navegação e Usabilidade:
+ ◦ Clareza e Simplicidade: site fácil de navegar com categorias bem definidas como
+"Categorias", "Novidades", "Promoções".
+ ◦ Barra de Pesquisa: Disponibilidade de uma barra de pesquisa para facilitar a
+localização de produtos específicos.
+ ◦ Carrinho de Compras: O ícone do carrinho de compras claramente visível e fácil de
+acessar, mostrando o número de itens no carrinho.
+ 2. Informações de Produtos:
+ ◦ Detalhamento: Cada produto tem uma descrição detalhada, incluindo o preço,
+descontos (se houver), e uma imagem clara do produto.
+ ◦ Categorias e Filtros: Produtos devem ser categorizados corretamente (RPG, Ação,
+Esportes, etc.) e filtros devem estar disponíveis para ajudar na busca.
+ 3. Processo de Compra:
+ ◦ Facilidade: O processo de compra deve ser intuitivo, com passos claros para
+adicionar itens ao carrinho e finalizar a compra.
+ ◦ Formas de Pagamento: Boleto e cartão de crédito, aos quais anteriormente á
+conclusão, o preenchimento de dados é obrigatório, e para cartão, preenchimento de
+dados do dono do cartão também é, incluindo parcelamento, como mostrado no EPLAY
+ 4. Design e Estética:
+ ◦ Aparência: O site tem um design moderno e atraente, utilizando cores e imagens de
+alta qualidade.
+ ◦ Responsividade: O site é responsivo e funciona bem em diferentes dispositivos e
+tamanhos de tela.
+ 5. Segurança e Privacidade:
+ ◦ Proteção de Dados: As informações dos usuários são protegidas por criptografia e
+políticas de privacidade claras estaão disponíveis.
+ ◦ Certificados: Uso de certificados de segurança (HTTPS) para proteger transações
+online.
+
+#### Caso de uso de usuário:
+
+Ator Principal
+ • Usuário (cliente do site)
+Objetivo
+ • Comprar um jogo de videogame através do site.
+Pré-condições
+ • O usuário deve ter acesso à internet e um dispositivo compatível (computador, tablet,
+smartphone).
+ • O usuário deve possuir uma forma de pagamento válida.
+Pós-condições
+ • O jogo é adicionado ao carrinho de compras.
+ • O usuário realiza o pagamento e recebe uma confirmação da compra.
+
+#### História de usuário:
+
+- Usuário cai no site e após navegar pelas abas e conseguir escolher entre categorias
+distintas, escolhe o game e pede para o pai comprar com o seu cartão de crédito. O
+cadastro no site é feito com os dados do usuário gamer, que cadastra seu nome
+completo, e-mail, cpf, que após cadastrar e escolher a forma de pagamento desejada
+(cartão de crédito), os dados do PAI que agora devem ser cadastrados, que no caso, são
+os dados do cartão como nome do titular, numero de segurança, entre outros, que após
+finalizada, o gamer receberá a confirmação da compra em seu e-mail, e seu pai
+comseguirá visualizar a cobrança em sua fatura, á depender de quantas vezes foi
+parcelado ou não. Caso claro de site super claro para qualquer usuário e de fácil
+entendimento e objetividade.
+
+
+## Protótipo
+
+#### Figma:
+
+- [Figma](https://www.figma.com/design/FiFpwvwwHX0rCbrXatjMg4/EPLAY?node-id=1-3&t=8EA9tb40JQ65zbBu-0)
+
 
 ## Instalação
 
