@@ -35,27 +35,30 @@ export type Game = {
 }
 
 export const Home = () => {
-  const { data: onSaleGames } = useGetFeaturedEmBreveQuery()
-  const { data: soonGames } = useGetFeaturedPromocoesQuery()
+  const { data: onSaleGames, isLoading: isLoadingSale } =
+    useGetFeaturedEmBreveQuery()
+  const { data: soonGames, isLoading: isLoadingSoon } =
+    useGetFeaturedPromocoesQuery()
 
-  if (onSaleGames && soonGames) {
-    return (
-      <>
-        <Banner />
-        <ProductsList
-          games={soonGames}
-          title="promoções"
-          background="gray"
-          id="on-sale"
-        />
-        <ProductsList
-          games={onSaleGames}
-          title="Em breve"
-          background="black"
-          id="coming-soon"
-        />
-      </>
-    )
-  }
-  return <h4>Carregando...</h4>
+  return (
+    <>
+      <Banner />
+      <ProductsList
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        games={soonGames!}
+        title="promoções"
+        background="gray"
+        id="on-sale"
+        isLoading={isLoadingSale}
+      />
+      <ProductsList
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        games={onSaleGames!}
+        title="Em breve"
+        background="black"
+        id="coming-soon"
+        isLoading={isLoadingSoon}
+      />
+    </>
+  )
 }

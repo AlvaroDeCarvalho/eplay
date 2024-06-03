@@ -1,5 +1,7 @@
 import Button from '../Button'
 import Tag from '../Tag'
+import Loader from '../Loader'
+
 import * as S from './styles'
 
 import { formatPrice } from '../../utils'
@@ -11,7 +13,7 @@ const Banner = () => {
   const { data: game } = useGetFeaturedGameQuery()
 
   if (!game) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
   return (
     <S.Image backgroundBanner={game.media.cover}>

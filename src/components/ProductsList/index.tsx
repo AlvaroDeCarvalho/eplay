@@ -4,17 +4,19 @@ import { Game } from '../../pages/Home'
 
 import { Container, List } from './styles'
 import { formatPrice } from '../../utils'
+import Loader from '../Loader'
 
 export type Props = {
   title: string
   background: 'gray' | 'black'
-  games: Game[]
+  games: Game[] | undefined
   id?: string
+  isLoading?: boolean
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 
-const ProductsList = ({ title, background, games, id }: Props) => {
+const ProductsList = ({ title, background, games, id, isLoading }: Props) => {
   const getGameTags = (game: Game) => {
     //estamos criando um array onde ficarar armazenado nossas informações,
     // vamos fazer um push de acordo com a situação
@@ -34,25 +36,26 @@ const ProductsList = ({ title, background, games, id }: Props) => {
     }
     return tags
   }
-
+  if (isLoading) return <Loader />
   return (
     <Container background={background} id={id}>
       <div className="container">
         <h2>{title}</h2>
         <List>
-          {games.map((item) => (
-            <li key={item.id}>
-              <Product
-                id={item.id}
-                category={item.details.category}
-                description={item.description}
-                infos={getGameTags(item)}
-                system={item.details.system}
-                title={item.name}
-                image={item.media.thumbnail}
-              />
-            </li>
-          ))}
+          {games &&
+            games.map((item) => (
+              <li key={item.id}>
+                <Product
+                  id={item.id}
+                  category={item.details.category}
+                  description={item.description}
+                  infos={getGameTags(item)}
+                  system={item.details.system}
+                  title={item.name}
+                  image={item.media.thumbnail}
+                />
+              </li>
+            ))}
         </List>
       </div>
     </Container>

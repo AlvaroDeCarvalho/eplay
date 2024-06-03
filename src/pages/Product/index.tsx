@@ -1,6 +1,7 @@
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
+import Loader from '../../components/Loader'
 
 import { useParams } from 'react-router-dom'
 
@@ -11,7 +12,7 @@ const Product = () => {
   const { data: game } = useGetGameQuery(id as string)
 
   if (!game) {
-    return <h1>Carregando...</h1>
+    return <Loader />
   }
   return (
     <>
@@ -21,10 +22,10 @@ const Product = () => {
       </Section>
       <Section title="Mais detalhes" background="gray">
         <p>
-          <b>Plataforma:</b> {game.details.system}
-          <b>Desenvolvedor:</b> {game.details.developer}
+          <b>Plataforma:</b> {game.details.system} <br />
+          <b>Desenvolvedor:</b> {game.details.developer} <br />
           <b>Idiomas:</b> O jogo oferece suporte para tais idiomas:
-          {game.details.languages.join(', ')}
+          {game.details.languages.join(', ')} <br />
           <b>Editora:</b> {game.details.publisher}
         </p>
       </Section>

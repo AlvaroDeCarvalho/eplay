@@ -6,7 +6,9 @@ import { TagContainer } from '../Tag/styles'
 import { colors, breakPoints } from '../../styles'
 import { Card } from '../Product/styles'
 
-export const Container = styled.section<Omit<Props, 'games' | 'title'>>`
+export const Container = styled.section<
+  Omit<Props, 'games' | 'title' | 'isLoading'>
+>`
   padding: 32px;
   background-color: ${(props) =>
     props.background === 'black' ? colors.black : colors.gray};
