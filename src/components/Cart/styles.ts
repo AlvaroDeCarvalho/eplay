@@ -41,6 +41,14 @@ export const SideBar = styled.aside`
   ${ButtonContainer} {
     width: 100%;
   }
+
+  .emptyCart {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
+    margin-bottom: 24px;
+  }
 `
 export const Prices = styled.p`
   font-weight: bold;

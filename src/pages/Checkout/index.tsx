@@ -148,7 +148,7 @@ const Checkout = () => {
     }
     return ''
   }
-
+  console.log(form)
   return (
     <div className="container">
       {isSuccess ? (
@@ -158,8 +158,9 @@ const Checkout = () => {
               É com satisfação que informamos que recebemos seu pedido com
               sucesso! <br />
               Abaixo estão os detalhes da sua compra: <br />
-              Número do pedido: {data.orderId}
-              <br /> Forma de pagamento:PurscheResponse
+              Número do pedido:{' '}
+              {data ? (data.orderId !== undefined ? data.orderId : '') : ''}
+              <br /> Forma de pagamento
               {payWithCard ? 'Cartão de crédito' : 'Boleto bancário'}
             </p>
             <p className="margin-top">

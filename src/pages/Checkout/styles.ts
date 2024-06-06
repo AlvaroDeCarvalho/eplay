@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakPoints, colors } from '../../styles'
 
 type InputGroupProps = {
   maxWidth?: string
@@ -18,14 +18,14 @@ export const Row = styled.div<RowProps>`
   margin-top: ${(props) => props.marginTop || '0px'};
   align-items: flex-end;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakPoints.tablet}) {
     display: block;
   }
 `
 
 export const InputGroup = styled.div<InputGroupProps>`
   //o flex:auto: a largura disponivel sera destribuida igualmente entre os elementos
-  flex: auto;
+
   height: 80px;
 
   width: 100%;
@@ -34,6 +34,10 @@ export const InputGroup = styled.div<InputGroupProps>`
     font-size: 14px;
     margin-bottom: 8px;
     display: block;
+  }
+  label {
+    width: 126px;
+    max-width: 100%;
   }
   input {
     border: 1px solid ${colors.white};

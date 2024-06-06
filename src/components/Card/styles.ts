@@ -6,6 +6,9 @@ export const Container = styled.div`
   background-color: ${colors.gray};
   padding: 24px;
   margin-bottom: 40px;
+  flex-direction: column;
+  flex: auto;
+
   h2,
   h3 {
     margin-bottom: 24px;

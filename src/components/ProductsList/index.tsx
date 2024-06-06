@@ -1,6 +1,5 @@
 import Product from '../Product'
 
-
 import { Container, List } from './styles'
 import { formatPrice } from '../../utils'
 import Loader from '../Loader'
