@@ -24,7 +24,7 @@ type Installment = {
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
-  const [purchase, { data, isSuccess }] = usePurchaseMutation()
+  const [purchase, { data, isSuccess, isLoading }] = usePurchaseMutation()
   const { items } = useSelector((state: RootReducer) => state.cart)
   const [installment, setInstallment] = useState<Installment[]>([])
 
@@ -441,8 +441,12 @@ const Checkout = () => {
               </div>
             </>
           </Card>
-          <Button type="submit" onClick={form.handleSubmit}>
-            Finalizar compra
+          <Button
+            type="submit"
+            onClick={form.handleSubmit}
+            disabled={isLoading}
+          >
+            {isLoading ? 'Finalizando compra...' : 'Finalizar compra'}
           </Button>
         </form>
       )}
