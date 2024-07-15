@@ -8,6 +8,11 @@ import { useParams } from 'react-router-dom'
 import { useGetGameQuery } from '../../services/api'
 
 const Product = () => {
+  // este id vai ser convocado no link da rota, este id vem la do componente Product , nele temos um elemento Card, que quando clicado nos redireciona para uma pagina com id
+  //passado pelo Parametro, esse parametro é subrido no elemento ProductList, que utiliza o elemento product num map de games, onde esse arrays de games surge na pagina Home...
+
+//
+  
   const { id } = useParams()
   const { data: game } = useGetGameQuery(id as string)
 
