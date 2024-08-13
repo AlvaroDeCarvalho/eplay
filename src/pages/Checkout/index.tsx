@@ -1,3 +1,41 @@
+// Este componente Checkout lida com a lógica de compra, incluindo a seleção do método de pagamento
+// (cartão de crédito ou boleto bancário), cálculo de parcelas, e validação do formulário usando Formik e Yup.
+
+// - Imports:
+//   - React hooks: useEffect, useState
+//   - Formik para gerenciamento de formulários
+//   - Redux para acessar o estado global
+//   - Components (Button, Card) e estilos
+
+// - Estado Local:
+//   - `payWithCard`: controla se o pagamento será feito com cartão de crédito
+//   - `installment`: armazena as opções de parcelas
+//   - `purchase`: função de mutação para processar a compra
+
+// - useEffect:
+//   - Calcula as parcelas possíveis com base no total do carrinho e formata os valores.
+
+// - Formik:
+//   - Inicializa o formulário com campos para dados pessoais, de entrega e de pagamento.
+//   - Valida os campos usando Yup, aplicando regras específicas, especialmente para os campos obrigatórios
+//     quando o pagamento é com cartão de crédito.
+
+// - Função `getErrorMensage`:
+//   - Retorna mensagens de erro baseadas na validação do Formik.
+
+// - Renderização Condicional:
+//   - Mostra um resumo da compra em caso de sucesso ou o formulário de pagamento para preenchimento e envio.
+
+// - Formulário:
+//   - Os campos de entrada estão ligados aos valores gerenciados pelo Formik (`form.values`).
+//   - As mudanças e eventos de desfoque são gerenciados pelos métodos `handleChange` e `handleBlur` do Formik.
+//   - Campos específicos para pagamento com cartão de crédito são exibidos condicionalmente com base no estado `payWithCard`.
+//   - A função `onSubmit` do Formik chama a mutação `purchase` para enviar os dados de compra.
+
+// - Mensagem de Sucesso:
+//   - Após a compra ser concluída, exibe um resumo da compra e instruções adicionais.
+
+
 import { useEffect, useState } from 'react'
 import { useFormik } from 'formik'
 import { useDispatch, useSelector } from 'react-redux'
