@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-
+import * as ENUMS from './query.enum'
 type Product = {
   id: number
   price: number
@@ -39,38 +39,37 @@ type PurchasePayload = {
 type PurscheResponse = {
   orderId: string
 }
-
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://fake-api-tau.vercel.app/api/eplay'
+    baseUrl: process.env.REACT_APP_URL_API
   }),
   endpoints: (builder) => ({
     getFeaturedGame: builder.query<Game, void>({
-      query: () => 'destaque'
+      query: () => ENUMS.QUERY.DESTAQUE
     }),
     getFeaturedPromocoes: builder.query<Game[], void>({
-      query: () => 'promocoes'
+      query: () => ENUMS.QUERY.PROMOCOES
     }),
     getFeaturedEmBreve: builder.query<Game[], void>({
-      query: () => 'em-breve'
+      query: () => ENUMS.QUERY.EM_BREVE
     }),
     getActionGames: builder.query<Game[], void>({
-      query: () => 'acao'
+      query: () => ENUMS.QUERY.ACAO
     }),
     getSportGames: builder.query<Game[], void>({
-      query: () => 'esportes'
+      query: () => ENUMS.QUERY.ESPORTES
     }),
     getSimulationGames: builder.query<Game[], void>({
-      query: () => 'simulacao'
+      query: () => ENUMS.QUERY.SIMULACAO
     }),
     getFightGames: builder.query<Game[], void>({
-      query: () => 'luta'
+      query: () => ENUMS.QUERY.LUTA
     }),
     getRpgGames: builder.query<Game[], void>({
-      query: () => 'rpg'
+      query: () => ENUMS.QUERY.RPG
     }),
     getGame: builder.query<Game, string>({
-      query: (id) => `jogos/${id}`
+      query: (id) => `${ENUMS.QUERY.JOGOS}/${id}`
     }),
     purchase: builder.mutation<PurscheResponse, PurchasePayload>({
       query: (body) => ({

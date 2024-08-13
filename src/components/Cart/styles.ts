@@ -61,6 +61,7 @@ export const Prices = styled.p`
     font-size: 12px;
     color: ${colors.lightGray};
   }
+
 `
 
 export const Quantity = styled.p`

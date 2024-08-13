@@ -48,7 +48,7 @@ const Header = () => {
               </S.Elementos>
               <S.Elementos to={'/novidades'}>
                 <HashLink
-                  to="#coming-soon"
+                  to="/#coming-soon"
                   title="clique aqui para acessar a seção de Novidades"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -57,7 +57,7 @@ const Header = () => {
               </S.Elementos>
               <S.Elementos to={'/promocoes'}>
                 <HashLink
-                  to="#on-sale"
+                  to="/#on-sale"
                   title="clique aqui para acessar a seção de promoções"
                   onClick={() => setIsMenuOpen(false)}
                 >
